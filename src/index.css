@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #E8E1D5;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant', serif;
+}
+
+/* Marquee animations */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  white-space: nowrap;
+  display: inline-flex;
+}
+.animate-marquee-slow {
+  animation: marquee 32s linear infinite;
+}
+
+/* Floating dots */
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50%       { transform: translateY(14px) translateX(8px); }
+}
+@keyframes floatC {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33%       { transform: translateY(-10px) translateX(12px); }
+  66%       { transform: translateY(8px) translateX(-6px); }
+}
+.float-a { animation: floatA 7s ease-in-out infinite; }
+.float-b { animation: floatB 9s ease-in-out infinite; }
+.float-c { animation: floatC 11s ease-in-out infinite; }
+
+/* Scroll margin for fixed nav */
+#about, #projects, #contact {
+  scroll-margin-top: 80px;
+}
