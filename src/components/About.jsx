@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const awards = [
   '國際問題解決松 教育創新組第二名',
-  '統一關係企業捷盟行銷提案競賽 第二名',
+  '統一關係企業捷盟物流行銷提案競賽 第二名',
 ]
 
 const sectionLabel = {
