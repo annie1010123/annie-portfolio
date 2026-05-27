@@ -239,8 +239,8 @@ export default function SocialMedia() {
 
           <FadeUp delay={0.05}>
             <div style={{ display: 'flex', gap: 20, maxWidth: 480, marginBottom: 64 }}>
-              <PostPlaceholder label="創業精神三大特質系列" data="教育型內容" />
               <PostPlaceholder label="NEXT UP 活動宣傳系列" data="活動推廣" />
+              <PostPlaceholder label="創業精神三大特質系列" data="教育型內容" />
             </div>
           </FadeUp>
         </div>
