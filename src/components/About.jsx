@@ -30,17 +30,14 @@ function FadeUp({ children, delay = 0, style }) {
 }
 
 export default function About() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.05 })
-
   return (
     <section id="about" style={{ background: '#E8E1D5', padding: '100px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }}>
 
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05 }}
           transition={{ duration: 0.5 }}
           style={sectionLabel}
         >
