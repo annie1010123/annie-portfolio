@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { projects } from '../data/projects'
@@ -379,7 +379,7 @@ export default function ProjectDetail() {
   const navigate = useNavigate()
   const project = projects[id]
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, [id])
 
