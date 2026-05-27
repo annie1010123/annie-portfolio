@@ -1,14 +1,34 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 
+function useScrollReveal() {
+  const ref = useRef(null)
+  const [visible, setVisible] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.unobserve(el) } },
+        { threshold: 0.1 }
+      )
+      observer.observe(el)
+      return () => observer.disconnect()
+    }, 120)
+    return () => clearTimeout(timer)
+  }, [])
+  return [ref, visible]
+}
+
 function FadeUp({ children, delay = 0, style }) {
+  const [ref, visible] = useScrollReveal()
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
       transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       style={style}
     >
@@ -239,11 +259,12 @@ export default function SocialMedia() {
 }
 
 function BackCTA({ handleBack }) {
+  const [ref, visible] = useScrollReveal()
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ textAlign: 'center', padding: '48px 40px 60px' }}
     >

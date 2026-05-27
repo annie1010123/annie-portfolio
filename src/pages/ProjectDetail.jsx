@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { projects } from '../data/projects'
@@ -98,13 +98,33 @@ function StatsGrid({ items }) {
   )
 }
 
+function useScrollReveal() {
+  const ref = useRef(null)
+  const [visible, setVisible] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.unobserve(el) } },
+        { threshold: 0.1 }
+      )
+      observer.observe(el)
+      return () => observer.disconnect()
+    }, 120)
+    return () => clearTimeout(timer)
+  }, [])
+  return [ref, visible]
+}
+
 function FadeItem({ children, delay = 0 }) {
+  const [ref, visible] = useScrollReveal()
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay, ease: 'easeOut' }}
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
     >
       {children}
     </motion.div>
@@ -289,11 +309,12 @@ function ProjectCover({ project }) {
 }
 
 function BackCTA({ handleBack }) {
+  const [ref, visible] = useScrollReveal()
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ textAlign: 'center', padding: '48px 40px 60px' }}
     >
@@ -325,11 +346,12 @@ function BackCTA({ handleBack }) {
 }
 
 function Section({ section }) {
+  const [ref, visible] = useScrollReveal()
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ marginBottom: 52 }}
     >
