@@ -163,14 +163,8 @@ export default function SocialMedia() {
               fontSize: 'clamp(32px, 5vw, 52px)', color: '#1A1A1A',
               lineHeight: 1.1, marginBottom: 12,
             }}>
-              Social Media Content Portfolio
-            </h1>
-            <p style={{
-              fontFamily: 'Cormorant, serif', fontStyle: 'italic',
-              fontSize: 'clamp(18px, 2.5vw, 24px)', color: '#C55A3A', marginBottom: 12,
-            }}>
               社群內容創作作品集
-            </p>
+            </h1>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontSize: 12, fontWeight: 500,
               letterSpacing: '3px', textTransform: 'uppercase',
