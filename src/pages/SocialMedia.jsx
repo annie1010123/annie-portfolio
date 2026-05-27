@@ -197,8 +197,9 @@ export default function SocialMedia() {
               fontFamily: 'Inter, sans-serif', fontSize: 16, color: '#2D2D2D',
               lineHeight: 1.8, marginBottom: 36,
             }}>
-              擔任永豐銀行校園大使，負責規劃影片腳本、協作拍攝與後期剪輯，
-              製作品牌 Reels 與貼文，協助金融品牌在學生族群中建立親和力。
+              擔任永豐銀行校園大使，協作參與 8 支品牌 Reels 製作，
+              負責影片腳本規劃、拍攝協作與後期剪輯，
+              協助金融品牌在學生族群中建立親和形象。
             </p>
           </FadeUp>
 
