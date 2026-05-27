@@ -31,7 +31,7 @@ const projects = [
     route: '/project/tripmate',
   },
   {
-    title: 'Social Media Portfolio',
+    title: '社群內容創作作品集',
     desc: '跨品牌社群內容創作，涵蓋 Reels、貼文與主視覺設計，最高單支 Reel 達到 84.5K 瀏覽',
     tags: ['短影音製作', '視覺設計', '品牌行銷'],
     period: '2025.01 — Present',
