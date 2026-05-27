@@ -483,13 +483,15 @@ export default function ProjectDetail() {
               }}>
                 專案簡報
               </p>
-              <iframe
-                src={project.pdfUrl}
-                width="100%"
-                height="680px"
-                style={{ border: 'none', borderRadius: 12, display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
-                title="專案簡報"
-              />
+              <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
+                <iframe
+                  src={project.pdfUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 'none', display: 'block' }}
+                  title="專案簡報"
+                />
+              </div>
             </div>
           )}
 
