@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect, useState, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { projects } from '../data/projects'
 
@@ -99,13 +99,11 @@ function StatsGrid({ items }) {
 }
 
 function FadeItem({ children, delay = 0 }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.2 })
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
     >
       {children}
@@ -291,13 +289,11 @@ function ProjectCover({ project }) {
 }
 
 function BackCTA({ handleBack }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.3 })
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ textAlign: 'center', padding: '48px 40px 60px' }}
     >
@@ -329,14 +325,11 @@ function BackCTA({ handleBack }) {
 }
 
 function Section({ section }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.1 })
-
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ marginBottom: 52 }}
     >
