@@ -473,6 +473,26 @@ export default function ProjectDetail() {
             <Section key={i} section={section} />
           ))}
 
+          {/* PDF Embed */}
+          {project.pdfUrl && (
+            <div style={{ marginTop: 48, marginBottom: 16 }}>
+              <p style={{
+                fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13,
+                color: '#9B9B9B', letterSpacing: '1.5px', textTransform: 'uppercase',
+                marginBottom: 16,
+              }}>
+                專案簡報
+              </p>
+              <iframe
+                src={project.pdfUrl}
+                width="100%"
+                height="680px"
+                style={{ border: 'none', borderRadius: 12, display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+                title="專案簡報"
+              />
+            </div>
+          )}
+
         </div>
 
         {/* Back to portfolio CTA */}

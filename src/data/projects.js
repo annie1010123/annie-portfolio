@@ -76,6 +76,7 @@ export const projects = {
       },
     ],
     skillTags: ['Notion', 'Canva', 'Google Analytics', 'SurveyCake', '質性訪談', '市場研究'],
+    pdfUrl: '/krush-profile.pdf',
   },
 
   fragrance: {
