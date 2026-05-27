@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <rect width="960" height="440" fill="#FFFFFF"/>
+
+  <!-- Subtle corner accents -->
+  <line x1="40" y1="40" x2="100" y2="40" stroke="#1A1A1A" stroke-width="1.5"/>
+  <line x1="40" y1="40" x2="40" y2="100" stroke="#1A1A1A" stroke-width="1.5"/>
+  <line x1="920" y1="400" x2="860" y2="400" stroke="#1A1A1A" stroke-width="1.5"/>
+  <line x1="920" y1="400" x2="920" y2="340" stroke="#1A1A1A" stroke-width="1.5"/>
+
+  <!-- SOCIAL MEDIA -->
+  <text
+    x="480"
+    y="210"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="96"
+    font-weight="700"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    letter-spacing="8"
+  >SOCIAL MEDIA</text>
+
+  <!-- Divider line -->
+  <line x1="360" y1="242" x2="600" y2="242" stroke="#C55A3A" stroke-width="1.5"/>
+
+  <!-- CONTENT CREATION -->
+  <text
+    x="480"
+    y="288"
+    font-family="'Arial', sans-serif"
+    font-size="18"
+    font-weight="400"
+    fill="#6B6B6B"
+    text-anchor="middle"
+    letter-spacing="6"
+  >CONTENT CREATION</text>
+</svg>

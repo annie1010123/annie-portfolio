@@ -36,7 +36,7 @@ const projects = [
     tags: ['短影音製作', '視覺設計', '品牌行銷'],
     period: '2025.01 — Present',
     gradient: 'linear-gradient(135deg, #C55A3A, #F4A582)',
-    cover: null,
+    cover: '/project-social-media.svg',
     route: '/project/social-media',
   },
 ]
