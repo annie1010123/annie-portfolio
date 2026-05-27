@@ -20,7 +20,7 @@
   <!-- SOCIAL MEDIA with IG gradient -->
   <text
     x="480"
-    y="210"
+    y="232"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="96"
     font-weight="700"
@@ -30,12 +30,12 @@
   >SOCIAL MEDIA</text>
 
   <!-- Divider line with IG gradient -->
-  <line x1="360" y1="242" x2="600" y2="242" stroke="url(#igGradient)" stroke-width="1.5"/>
+  <line x1="360" y1="264" x2="600" y2="264" stroke="url(#igGradient)" stroke-width="1.5"/>
 
   <!-- CONTENT CREATION -->
   <text
     x="480"
-    y="288"
+    y="310"
     font-family="'Arial', sans-serif"
     font-size="18"
     font-weight="400"
