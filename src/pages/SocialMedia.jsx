@@ -106,12 +106,7 @@ export default function SocialMedia() {
     <div style={{ background: '#E8E1D5', minHeight: '100vh' }}>
       <Navbar />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        style={{ paddingTop: 70 }}
-      >
+      <div style={{ paddingTop: 70 }}>
         {/* Back link */}
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '28px 40px 0' }}>
           <button
@@ -238,7 +233,7 @@ export default function SocialMedia() {
             © 2026 Annie Shih. All rights reserved.
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
