@@ -68,8 +68,8 @@ function PostPlaceholder({ label, data, src }) {
     <div style={{ flex: '1 1 0', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
       <div style={{
         width: '100%',
-        aspectRatio: '1/1',
-        background: 'linear-gradient(135deg, #E07855, #F4A582)',
+        aspectRatio: '9/16',
+        background: 'linear-gradient(135deg, #C55A3A, #E07855)',
         borderRadius: 16,
         overflow: 'hidden',
         display: 'flex',
