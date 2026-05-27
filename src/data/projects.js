@@ -4,6 +4,7 @@ export const projects = {
     title: 'KRUSH Dance TUV專案',
     gradient: 'linear-gradient(135deg, #C55A3A, #E07855)',
     cover: '/project-krush.png',
+    hideCover: true,
     info: {
       unit: 'KRUSH Dance｜23屆資訊種子培訓計畫',
       period: '2025.09 — 2026.01',

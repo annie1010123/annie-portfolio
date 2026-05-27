@@ -440,7 +440,7 @@ export default function ProjectDetail() {
         </div>
 
         {/* Cover */}
-        <ProjectCover project={project} />
+        {!project.hideCover && <ProjectCover project={project} />}
 
         {/* Content */}
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 40px 0' }}>
