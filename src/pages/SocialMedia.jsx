@@ -63,7 +63,7 @@ function ReelPlaceholder({ label, data, src }) {
   )
 }
 
-function PostPlaceholder({ label, data }) {
+function PostPlaceholder({ label, data, src }) {
   return (
     <div style={{ flex: '1 1 0', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
       <div style={{
@@ -71,11 +71,15 @@ function PostPlaceholder({ label, data }) {
         aspectRatio: '1/1',
         background: 'linear-gradient(135deg, #E07855, #F4A582)',
         borderRadius: 16,
+        overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-        <span style={{ fontSize: 32, color: 'rgba(255,255,255,0.85)' }}>🖼</span>
+        {src
+          ? <img src={src} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          : <span style={{ fontSize: 32, color: 'rgba(255,255,255,0.85)' }}>🖼</span>
+        }
       </div>
       <div style={{ textAlign: 'center' }}>
         <p style={{ fontFamily: 'Inter, sans-serif', fontSize: 13, fontWeight: 500, color: '#1A1A1A', marginBottom: 4 }}>{label}</p>
@@ -239,8 +243,8 @@ export default function SocialMedia() {
 
           <FadeUp delay={0.05}>
             <div style={{ display: 'flex', gap: 20, maxWidth: 480, marginBottom: 64 }}>
-              <PostPlaceholder label="NEXT UP 活動宣傳系列" data="活動推廣" />
-              <PostPlaceholder label="創業精神三大特質系列" data="教育型內容" />
+              <PostPlaceholder label="NEXT UP 活動宣傳系列" data="活動推廣" src="/post-nextup.png" />
+              <PostPlaceholder label="創業精神三大特質系列" data="教育型內容" src="/post-entrepreneurship.png" />
             </div>
           </FadeUp>
         </div>
