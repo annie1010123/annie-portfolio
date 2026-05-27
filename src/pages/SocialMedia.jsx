@@ -227,13 +227,13 @@ export default function SocialMedia() {
               fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 22,
               color: '#1A1A1A', marginBottom: 12,
             }}>
-              創新創業社社幹部
+              創新創業社社副社長
             </h2>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontSize: 16, color: '#2D2D2D',
               lineHeight: 1.8, marginBottom: 36,
             }}>
-              擔任創新創業社幹部，有協助社群經營與貼文內容製作。
+              擔任創新創業社副社長，協助跨校論壇主視覺的討論設計，並負責行銷部社群經營與貼文內容製作。
             </p>
           </FadeUp>
 
