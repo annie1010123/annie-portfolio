@@ -237,7 +237,7 @@ export default function SocialMedia() {
               fontFamily: 'Inter, sans-serif', fontSize: 16, color: '#2D2D2D',
               lineHeight: 1.8, marginBottom: 36,
             }}>
-              擔任創新創業社副社長，協助跨校論壇主視覺的討論設計，並負責行銷部社群經營與貼文內容製作。
+              擔任創新創業社副社長，協助跨校論壇主視覺的討論設計，也有協助行銷部社群經營與貼文內容製作。
             </p>
           </FadeUp>
 
