@@ -476,12 +476,18 @@ export default function ProjectDetail() {
           {/* PDF Embed */}
           {project.pdfUrl && (
             <div style={{ marginTop: 48, marginBottom: 16 }}>
-              <p style={{
-                fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13,
-                color: '#9B9B9B', letterSpacing: '1.5px', textTransform: 'uppercase',
-                marginBottom: 16,
+              <h2 style={{
+                fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 20,
+                color: '#1A1A1A', marginBottom: 8,
+                paddingLeft: 16, borderLeft: '3px solid #C55A3A', lineHeight: 1.3,
               }}>
                 專案簡報
+              </h2>
+              <p style={{
+                fontFamily: 'Inter, sans-serif', fontSize: 13, color: '#9B9B9B',
+                marginBottom: 20, paddingLeft: 16,
+              }}>
+                可在下方視窗內捲動瀏覽完整簡報內容 ↓
               </p>
               <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
                 <iframe
